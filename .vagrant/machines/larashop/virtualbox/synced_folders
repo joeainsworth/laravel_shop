@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/larashop":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/larashop","hostpath":"/Users/joeainsworth/Code/larashop","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/joeainsworth/Code/larashop","disabled":false,"__vagrantfile":true}}}
