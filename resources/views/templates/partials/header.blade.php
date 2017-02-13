@@ -12,7 +12,7 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#">Shop</a></li>
+					<li><a href="{{ route('index') }}">Shop</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Cart</a></li>

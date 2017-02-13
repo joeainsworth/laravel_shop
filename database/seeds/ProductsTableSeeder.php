@@ -13,14 +13,18 @@ class ProductsTableSeeder extends Seeder
      */
     public function run()
     {
-        $faker = Faker::create('en_GB');
+        $faker = Faker::create('en_EN');
     	foreach (range(1,8) as $index) {
+            
+            $word = $faker->word;
+
     		DB::table('products')->insert([
-				'name' => $faker->word,
-	        	'slug' => $faker->word,
+				'name' => $word,
+	        	'slug' => $word,
 	    		'description' => $faker->paragraph,
+                'stock' => $faker->randomNumber(1),
 	    		'price' => $faker->randomNumber(2),
-	    		'image' => $faker->imageUrl(600, 400, 'abstract') ,
+	    		'image' => 'http://placehold.it/600x400/efefef/?text='.$word ,
     		]);
     	}
     }

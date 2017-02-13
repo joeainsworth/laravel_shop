@@ -11,5 +11,6 @@
 |
 */
 
-Route::get('/', 'ProductController@index');
-
+Route::get('/', 'ProductController@index')->name('index');
+Route::get('product/{slug}', 'ProductController@show')->name('product');
+Route::resource('cart', 'CartController');

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Product;
+use App\Product as Product;
 
 class ProductController extends Controller
 {
@@ -12,5 +12,16 @@ class ProductController extends Controller
     {
     	$products = Product::all();
     	return view('home')->with('products', $products);
+    }
+
+    public function show($slug)
+    {
+    	$product = Product::where('slug', $slug)->first();
+    	
+        if (!$product) {
+            
+        }
+
+    	return view('product.show')->with('product', $product);
     }
 }

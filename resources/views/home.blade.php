@@ -9,9 +9,12 @@
 				@foreach ($items as $product)
 					<div class="col-md-3">
 						<div class="thumbnail">
-							<img src="{{ $product->image }}" class="image-responsive">
+							<a href="{{ route('product', $product->slug) }}">
+								<img src="{{ $product->image }}" class="image-responsive">
+							</a>
 							<div class="caption">
 								<h4>{{ $product->name }}</h4>
+								<p>&pound;{{ $product->price }}</p>
 							</div>
 						</div>
 					</div>
