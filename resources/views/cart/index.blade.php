@@ -23,7 +23,7 @@
 						<td>{{ showCurrency($item->model->price) }}</td>
 						<td>{{ $item->qty }}</td>
 						<td>
-							{{ Form::open(['route' => ['cart.destroy', $item->rowId], 'method' => 'delete']) }}
+							{{ Form::open(['route' => ['cart.destroy', $item->rowId], 'method' => 'delete', 'class' => 'form-inline']) }}
 								<button type="submit" class="btn btn-link btn-sm">remove</button>
 							{{ Form::close() }}
 						</td>
