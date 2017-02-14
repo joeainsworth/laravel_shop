@@ -15,7 +15,7 @@
 					<li><a href="{{ route('index') }}">Shop</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Cart</a></li>
+					<li><a href="{{ route('cart.index') }}">Cart ({{ Cart::count() }})</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
