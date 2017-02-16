@@ -23,6 +23,15 @@ class CartController extends Controller
     	return redirect('cart')->withSuccessMessage("{$request->quantity} x {$request->name} was added to your cart");
     }
 
+    public function update(Request $request, $rowId)
+    {
+        Cart::update($rowId, $request->quantity);
+
+        session()->flash('success_message', 'Your cart has been updated!');
+
+        return response()->json(['success' => true]);
+    }
+
     public function destroy($rowId)
     {
     	$product = Cart::get($rowId);
